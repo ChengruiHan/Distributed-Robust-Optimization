@@ -245,7 +245,6 @@ def plot_results(solution, n, d, x_values, computation_time):
     plt.xlim(left=0, right=t_max * 1.02)
     plt.ylim(bottom=0)
 
-    # 添加最后时刻到 x 轴刻度（四舍五入）
     current_ticks = plt.gca().get_xticks()
     if t_max_rounded not in current_ticks:
         new_ticks = np.append(current_ticks[current_ticks < t_max_rounded], t_max_rounded)
